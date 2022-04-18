@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: grid;
+  height: 100vh;
+  width: auto;
+  color: #fafafa;
+  overflow: hidden;
+}
+
+h1,
+h2,
+p,
+span,
+label {
+  color: #202124e6;
+  margin: 0;
+}
+
+h1,
+.switch {
+  font-weight: 700;
+  font-size: calc(1.5vw + 24px);
+  padding: 15px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: calc(1vw + 18px);
+}
+
+p {
+  font-weight: 300;
+  font-size: calc(0.25vw + 14px);
+}
+small {
+  margin-top: -10px;
+  padding-bottom: 5px;
+  color: #ff0000e0;
+}
+
+[hidden] {
+  visibility: hidden;
+}
+
+.container {
+  display: flex;
+  max-width: 1170px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.text,
+.form {
+  margin-top: 50px;
+}
+
+.wrap-switch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.switch {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.wrap-switch input {
+  display: none;
+}
+
+.wrap-switch input[type="radio"]:checked + label {
+  font-weight: bold;
+  opacity: 1;
+}
+
+.wrap-switch input[type="radio"]:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 65px;
+  height: 5px;
+  margin-top: 10px;
+  background-color: #de4198;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 379px;
+}
+
+form input,
+form textarea,
+.btn-submit {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #202124e6;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+form input:focus-visible,
+form textarea:focus-visible {
+  outline: none;
+}
+
+.btn-submit {
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #202124e6;
+  color: #fafafa;
+  transition: all ease 0.25s;
+}
+
+.message {
+  color: #fafafa;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #008000ab;
+}
+.errorMessage {
+  background-color: #e80000b3;
+}
+.errorItem {
+  border: 2px solid #e80000b3;
+}
+
+.successItem {
+  border: 2px solid #008000a8;
+}
