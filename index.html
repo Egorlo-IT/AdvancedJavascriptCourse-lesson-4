@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Lesson 4</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="wrap-switch">
+          <input type="radio" id="text" name="switch" />
+          <label for="text" class="switch">Big text</label>
+          <span>|</span>
+          <input type="radio" id="form" name="switch" />
+          <label for="form" class="switch">Form</label>
+        </div>
+        <p class="text">
+          One: 'Hi Mary.' Two: 'Oh, hi.' One: 'How are you doing?' Two: 'I'm
+          doing alright. How about you?' One: 'Not too bad. The weather is great
+          isn't it?' Two: 'Yes. It's absolutely beautiful today.' One: 'I wish
+          it was like this more frequently.' Two: 'Me too.' One: 'So where are
+          you going now?' Two: 'I'm going to meet a friend of mine at the
+          department store' One: 'Going to do a little shopping?' Two: 'Yeah, I
+          have to buy some presents for my parents.' One: 'What's the occasion?'
+          Two: 'It's their anniversary.' One: 'That's great. Well, you better
+          get going. You don't want to be late.' Two: 'I'll see you next time.'
+          One: 'Sure. Bye.'
+        </p>
+        <form class="form" action="#" onsubmit="handleFormSubmit(event)" hidden>
+          <span class="message" hidden></span>
+          <input
+            class="name"
+            name="name"
+            type="text"
+            placeholder="Enter your first and last name"
+            pattern="^[a-zA-Z|а-яА-Я]+\s?[a-zA-Z|а-яА-Я]+$"
+            required
+          />
+          <small class="errorName" hidden></small>
+          <input
+            class="phone"
+            name="phone"
+            type="text"
+            placeholder="Enter your phone +7(000)000-0000"
+            pattern="(\+7)[\s(]*\d{3}[)\s]*\d{3}[\s-]?\d{4}"
+            required
+          />
+          <small class="errorPhone" hidden></small>
+          <input
+            class="email"
+            name="email"
+            type="text"
+            placeholder="Enter your email"
+            pattern="[a-z0-9]+[.]?[-]?[a-z0-9]+?@[a-z]+\.[a-z]{2}"
+            required
+          />
+          <small class="errorEmail" hidden></small>
+          <textarea
+            class="content"
+            name="content"
+            cols="30"
+            rows="10"
+            lang="zxx"
+            placeholder="Enter text your message"
+            pattern="[a-z0-9]"
+            required
+          ></textarea>
+          <small class="errorText" hidden></small>
+          <button class="btn-submit" type="submit">Send</button>
+        </form>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
